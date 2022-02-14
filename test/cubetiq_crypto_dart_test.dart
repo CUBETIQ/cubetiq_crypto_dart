@@ -1,5 +1,4 @@
-import 'package:cubetiq_crypto_dart/cubetiq_crypto_dart.dart';
-import 'package:cubetiq_crypto_dart/src/core/default_crypto.dart';
+import 'package:cubetiq_crypto_dart/crypto.dart';
 import 'package:test/test.dart';
 
 void main() {

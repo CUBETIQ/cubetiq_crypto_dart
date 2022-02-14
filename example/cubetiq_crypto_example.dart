@@ -1,5 +1,4 @@
-import 'package:cubetiq_crypto_dart/cubetiq_crypto_dart.dart';
-import 'package:cubetiq_crypto_dart/src/core/default_crypto.dart';
+import 'package:cubetiq_crypto_dart/crypto.dart';
 
 void main() {
   final key = "67rKmuc6DiDukE0jsUP421Eizo4CreaL6Q7Pg/NmH/s=";
