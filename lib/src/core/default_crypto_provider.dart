@@ -3,9 +3,9 @@ import 'package:encrypt/encrypt.dart';
 
 class DefaultCryptoProvider implements CryptoProvider {
   final String key;
-  final String iv;
+  final String? iv;
 
-  DefaultCryptoProvider(this.key, this.iv);
+  DefaultCryptoProvider(this.key, {this.iv});
 
   Encrypter? _encrypter;
 
@@ -18,8 +18,9 @@ class DefaultCryptoProvider implements CryptoProvider {
     return Key.fromBase64(key);
   }
 
-  IV getIV() {
-    return IV.fromBase64(iv);
+  IV? getIV() {
+    if (iv == null) return null;
+    return IV.fromBase64(iv!);
   }
 
   @override

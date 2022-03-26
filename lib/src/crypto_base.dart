@@ -1,3 +1,5 @@
+import 'package:cubetiq_crypto_dart/crypto.dart';
+
 import 'core/crypto_provider.dart';
 
 class Crypto {
@@ -7,8 +9,17 @@ class Crypto {
   Crypto(this._provider);
 
   static Crypto? _crypto;
+  
   static Crypto newInstance(CryptoProvider provider) {
-    _crypto ??= Crypto(provider);
+    return Crypto(provider);
+  }
+
+  static Crypto defaultInstance(String key, {String? iv}) {
+    return newInstance(DefaultCryptoProvider(key, iv: iv));
+  }
+
+  static Crypto getInstance(CryptoProvider provider) {
+    _crypto ??= newInstance(provider);
     return _crypto!;
   }
 

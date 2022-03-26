@@ -1,5 +1,5 @@
 name: cubetiq_crypto_dart
-description: A basic cryptojs for cubetiq application data encryption and protection.
+description: A basic crypto in dart for cubetiq application data encryption and protection.
 version: 1.0.0
 
 environment:

@@ -6,7 +6,7 @@ void main() {
   final iv = "FEFM9AY2m5jDq6GZ+CfLIA==";
 
   group('Default Provider Crypto Tests', () {
-    final crypto = Crypto.newInstance(DefaultCryptoProvider(key, iv));
+    final crypto = Crypto.newInstance(DefaultCryptoProvider(key, iv: iv));
 
     setUp(() {});
 
